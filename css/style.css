@@ -124,8 +124,49 @@ input[type="checkbox"] {
   margin: 0 10px 10px 0;
 }
 
+input::placeholder {
+  text-align: right;
+	font-size: .8em;
+	font-style: italic;
+	color: #a8adb2;
+}
+
 input:focus {
 	border: 1px solid #46698b;
+	background-color: rgba(12, 89, 195, .75);
+	transition: all 1s ease-out;
+	color: #ffffff;
+}
+
+input::-webkit-input-placeholder {
+    color: #a8adb2;
+}
+input:focus::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+    color: #a8adb2;
+}
+input:focus:-moz-placeholder {
+    color: #ffffff;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: #a8adb2;
+}
+input:focus::-moz-placeholder {
+    color: #ffffff;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+  	color: #a8adb2;
+}
+input:focus:-ms-input-placeholder {
+    color: #ffffff;
 }
 
 select {
@@ -162,12 +203,6 @@ hr.top-divider {
     height: 3px;
 }
 
-input::placeholder {
-  text-align: right;
-	font-size: .8em;
-	font-style: italic;
-	color: #a8adb2;
-}
 
 /* =================================
   Helper Styles
